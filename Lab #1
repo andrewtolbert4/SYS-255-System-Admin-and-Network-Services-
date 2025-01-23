@@ -1,0 +1,21 @@
+This Lab started with the setup and understanding how to get to vcenter and how to set it up. The link that you go to is vcenter02.cyber.local and following this you click on advanced and bypass the warnings.
+You then login with the username andrew.tolbert@cyber and your password. The you open VSphere and you are able to see the VMs and what they were.
+From there what I did was I took a snapshot of the VMs to make sure nothing was to go wrong.
+I then went into my settings for the fw01 and added a new network adapter and equipped it with the LAN selection.
+I then powered up the virtual machine began to assign interfaces. I first acknowledged that the WAN connection was now named em0 and the LAN connection was now named em1.
+I then selected one, Declined using dhcp, chose 24 bit subnet mask, put in the upstream gateway which is 10.0.17.2, and then bypassed ipv6 and http.
+I then selected two, declined using dhcp, chose 24 bit subnet mask, use the LAN IP address 10.0.5.2, declined using a LAN Gateway, and bypass ipv6 and http.
+I then booted up the windows virtual machine.
+Following this I struggled to change aspects of my account due to me not having privileges. I had to login to the administrator account and add my account as an admin.
+I was then able to change my name by open file explorer and goping to "My PC", properties, change settings, clicked change, and changed it to wks01-andrew. 
+I then went into the internet protocol version 4 to make sure that the IP addresses were correct with having the IP address 10.0.5.100 with a subnet mask of 255.255.255.0 and a default gateway of 10.0.5.2 and DNS with the same.
+I then went into the web browser and typed in 10.0.5.2 to bring up the pfsense page. This allowed me to login to my account with the username admin and the password pfsense. 
+I then changed the hostname to fw1-andrew, the domain to andrew.local, the primary DNS to 8.8.8.8, and the secondary DNS to 1.1.1.1
+I then unblocked the WAN from blocking private networks. I then had the option to reset the password and I did.
+I then went into the fw1-andrew and pinged -c 1 champlain.edu. I then brought up powershell and asked the questions whoami, hostname, ping -c 1 google.com, and ipconfig /all.
+I then went to chrome and successfully pulled up the champlain website.
+I then had to use the tracert command while also limiting the number of hops by putting /h 3 before the champlain.edu.
+I then went through and completed some of the final questions.
+
+After completing this lab I looked more into tracert to understand better what it held and what it really meant.
+I also looked through some of the other options of PFsense as I was interested in what else you could do.
