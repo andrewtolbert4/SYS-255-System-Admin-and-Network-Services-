@@ -1,0 +1,16 @@
+Well the first day I started this lab, I was tasked with compiling my files after deleting my past snapshots. After some time(about 2 hours) it had gone about 9%.
+The next day after it was done I began working again. I was able to start getting through the lab and made sure that I successfully change4d the network adapter from WAN to LAN.
+I then booted up my ad01 machine and went into the ethernet settings and set the IP Addresses, Netmasks, Default Gateway and DNS.
+I then changed my host name and went into powershell and made sure that these changes were successful by asking whoami and pinging google.com.
+Following that I went back to the server manager and went into manage and went to add roles and features and chose active directory domain services.
+I then installed and waited and then I promoted the server to be the primary domain controller.
+Following this I started to add a new forest. I got stuck here but figured it out.
+Following a restart, I then went into the new admin and changed the DNS server back to 10.0.5.2.
+I then went into the DNS manager through the server manager and added a new host domain called andrew.
+I tried then to create an associated (PTR record) but was unable to as I hadn't yet created a reverse lookup zone. I then went to do so and then went back and checked the prior box.
+I then went to the active directory users and computers and began to add in two users. The first one at the end I added to Domain Admins group and the second I createdd the same info but didn't add it to Domain Admins
+I then went to wks01 and changed the DNS address to 10.0.5.5.
+I then did some nslookup and most of it was successful.
+I then went into control panel, system and security, system to change the domain of the wks01 computer. I then restated it.
+Following this I went back to the ad01 and made sure that the computer was listed in the domain.
+The last thing I did was I went into powershell on the wks01 to test some final things to make sure it was all connected.
