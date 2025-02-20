@@ -1,0 +1,11 @@
+This lab started with me first restarting all my machines and logging into dhcp using root with my password. Following this I attempted to download puTTy but it was not wanting to connect so I decided i would use ssh andrew@dhcp01-andrew instead. This was more comfortable to me.
+Following this I downloaded dhcp by using "sudo yum install dhcp". I then went into a semi-permanant sudo by using the command "sudo -i".
+I then went into vi by typing in the command "vi /etc/dhcp/dhcpd.conf". This brought me into vim and I was able to put in what I needed to which is located on canvas.
+I then started the dhcp server and enabled it.
+I then went through and configured the firewall in the same cmd. The information and commands I need for this are in the canvas lab page.
+I then went into wks01 and changed the internet to run dynamically instead of manually.
+I then used ipconfig /all to make sure everything worked. 
+I then attempted to find the dhcp log but was unable to do so along with many other members of the class. 
+I then went into wireshark to capture the commands of releasing, renewing and viewing all of the ipconfig. I was then able to outline and find the dhcp pings.
+I got to this point and I thought that I was done but the thing that I struggled with most on this lab was the lease time and how to set it. After some research I still could not figure it out.
+I finally figured it out but then I ran into the problem of viewing if I was successful. After a little while 
