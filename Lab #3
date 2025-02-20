@@ -1,0 +1,5 @@
+This lab started with me going into the dhcp machine for the first time. I followed the video tutorial which instructed me to get to the network settings and to change the required categories.
+I then tested this by pinging google, fw, and ad.
+I then went into the WKS workstation and successfully pinged the dhcp machine after adding it to the DNS.
+After that I went into powershell and accessed the dhcp machine through ssh. This then allowed me to access many other commands that were run on the other machine.
+Following this the lab was complete. I then tested around some other commands like mv(allows you to move and rename files), uname(shows basic information about the operating system), and grep(searches for a string that has output).
