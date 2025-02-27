@@ -1,0 +1,22 @@
+This lab started off by having me create a new OU within the local server called SYS-255. I then added the accounts named Accounts, Computers, and Groups.
+I then went into accounts and created the users Alice, Bob and Charlie.
+I then brought my Workmachine WKS01 to the OU and placed it within Computers.
+I then went to the groups section and added a security group with the group scope global named custom-desktop.
+I then added Bob and Alice to this group(not charlie)
+I then went into the tool bar and went into group policy management. This allowed me to then create a new group policy within SYS255. Once I did this I added the custom-desktop group to the security filter.
+I then removed the authenticated users from the security filter but added domain computers.
+Following this I went into the delegation tab and went to advanced and selected deny for the apply group policy under domain computers.
+I then went into the user policies and went through to desktop and selected remove recycle bin icon from desktop. One I enabled this, I apply and logged in as alice. 
+This allowed me to check if I was successful by using the command gpresult /r. I was.
+I then went back into SYS255 and went into the computer folder. This was to change the security options and make it so the last login username isn't saved.
+Then I went in to the wks01 cmd and used the command gpupdate /force and the gpresult /scope computer /r to show that the Disable Last Login was confirmed. 
+
+
+
+Preparations:
+Read through all GitHub files to remind me on what was happening at the beginning.
+WAN IP 10.0.17.116
+Vsphere login- un-andrew.tolbert@cyber pw Sweetm34d1!@
+pfsense login- un-admin pw-pfsense
+Password used for accounts created within Sweetm34d1!@
+I struggled to create a network chart using that site but felt I had a good grasp of the layout.
