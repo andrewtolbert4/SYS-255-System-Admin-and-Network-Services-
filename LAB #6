@@ -1,0 +1,12 @@
+To map a network drive using group policy prefences, you must first go into the group policy management page. 
+Then you need to create a new GPO and go into edit.
+From there you go to user configuration->Preferences->Windows Settings->Drive Maps. 
+Here you have to try and create it by setting a name, choosing a drive letter and making sure you choose to create.
+Then you must go to the group where you want to set the policy to and select link existing GPO.
+Then you go back to the machine and do gpresult /r to check if anything is set in the group policy.
+If nothing has you may need to reset using the gpupdate /force command.
+
+After completing this lab I went back into some of the interesting topics within the sections. The first one I took a deeper dive into was the toher things that can be changed through the use of sconfig. 
+I found many different things including remote desktop availability, the date and time of the machine, and setting updates or checking for updates.
+I then went back and looked into some of the other server roles. Some that caught my eye were Remote Desktop Services(RDS), Hyper-V, and Windows Server Update Services(WSUS). Not sure if we will use these in the future.
+I then finally went back into the file server resource manager to see some of the other options. This included File Management Tasks, Classification Management, and Quota Management.
