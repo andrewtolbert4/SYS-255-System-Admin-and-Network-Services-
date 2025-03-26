@@ -1,0 +1,5 @@
+The first step is to go into your server manager, right click on fs01 and choose add roles and features. 
+Following this you go through the settings and choose dhcp as a new role and install. Then you finish setting up DHCP.
+Then you need to do the same thing for ad02 but instead of roles you go into features and add dhcp tools and install.
+Then you need to go into your dhcp, right click on fs01 and add new scope. You then go through these settings adding in certain things like a name, a ip range and length, exclusions, and the lease duration. 
+You then go back into your workstation and use the command ipconfig /release to release the current IP configuration and the ipconfig /renew to get a new one. This will then give you the new IP address and a new DHCP address.
